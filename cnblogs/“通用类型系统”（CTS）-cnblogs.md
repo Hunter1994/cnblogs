@@ -1,0 +1,7 @@
+<p style="background-color: #169fe6;"><span style="font-size: 18pt;"><strong><span style="color: #ffffff;">一、什么是&ldquo;通用类型系统&rdquo;（CTS）</span></strong></span></p>
+<p>描述类型的定义和行为</p>
+<p style="background-color: #169fe6;"><span style="font-size: 18pt;"><strong><span style="color: #ffffff;">二、CTS规范</span></strong></span></p>
+<p>一个类型可以包含零个或者多个成员<br /><span style="font-size: 14pt;"><strong>1，成员</strong></span><br />①字段（Field）<br />作为对象状态一部分的数据变量。字段根据名称和类型来区分<br />②方法（Method）<br />针对对象执行操作的函数，通常会改变对象的状态。方法有一个名称、一个签名以及一个或多个修饰符。签名指定参数数量（及其顺序）；参数类型；方法是否有返回值；如果有返回值，还要指定返回值类型<br />③属性（Property）<br />对于调用者，属性看起来是字段。但对于类型的实现者，属性看起来像是一个方法（或两个方法）。属性允许在访问值之前校验输入参数和对象状态，以及/或者仅在必要时才计算某个值。属性还允许类型的用户采用简化的语法。最后，属性允许创建只读或只写的&ldquo;字段&rdquo;<br />④事件（Event）<br />事件在对象以及其他相关对象之间实现了通知机制。</p>
+<p><strong><span style="font-size: 14pt;">2，类型的可见性规则以及类型成员的访问规则</span></strong><br />①private<br />成员只能由同一个类（class）类型中的其他成员访问<br />②family<br />成员可由派生类型访问，不管那些类型是否在同一个程序集中（C#使用protected）<br />③family and assembly<br />成员可由派生类型访问，但这些派生类型必须在同一个程序集中（C#没有提供这种访问控制）<br />④assembly<br />成员可由同一个程序集中任何代码访问（C#使用internal）<br />⑤family or assem<br />成员可由任何程序集的派生类访问。成员也可以由同一个程序集的任何类型访问（C#使用protected internal）<br />⑥public<br />成员可由任何程序中的任何代码访问</p>
+<p><span style="font-size: 14pt;"><strong>3，一个类型只能从一个基类派生（单继承）</strong></span></p>
+<p><strong><span style="font-size: 14pt;">4，CTS还为类型继承、虚方法、对象生存期等定义了相应的规则</span></strong></p>

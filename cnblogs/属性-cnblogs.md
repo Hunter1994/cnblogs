@@ -1,0 +1,2 @@
+<p>匿名类型<br />            //定义类型，构造实例，并初始化属性<br />            var o1 = new {Name = "zhang"};<br />①编译器会判断每个表达式的类型，推断类型的私有字段<br />②为每个字段创建公共只读属性<br />③创建一个构造器接受这些表达式，把表达式的求值结果初始化只读字段<br />④编译器还会重写Object的Equeals和GetHashCode和ToString方法</p>
+<p><br />有参数属性（索引器）<br />public bool this[int index]{}</p>
